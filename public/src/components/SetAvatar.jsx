@@ -54,7 +54,7 @@ export default function SetAvatar() {
 
   useEffect(async () => {
     const data = [];
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
       const image = await axios.get(
         `${api}/${Math.round(Math.random() * 1000)}`
       );
@@ -109,7 +109,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: #131324;
+  background-color: #00072d;
   height: 100vh;
   width: 100vw;
 
@@ -119,7 +119,7 @@ const Container = styled.div`
 
   .title-container {
     h1 {
-      color: white;
+      color: #a6e1fa;
     }
   }
   .avatars {
@@ -144,7 +144,7 @@ const Container = styled.div`
     }
   }
   .submit-btn {
-    background-color: #4e0eff;
+    background-color: #0e6ba8;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -154,7 +154,7 @@ const Container = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #0a2472;
     }
   }
 `;
