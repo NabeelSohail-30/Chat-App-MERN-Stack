@@ -116,6 +116,7 @@ const Container = styled.div`
     grid-template-rows: 15% 70% 15%;
   }
   .chat-header {
+    background-color: #0e6ba8;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,7 +160,7 @@ const Container = styled.div`
         padding: 1rem;
         font-size: 1.1rem;
         border-radius: 1rem;
-        color: #d1d1d1;
+        font-weight: 500;
         @media screen and (min-width: 720px) and (max-width: 1080px) {
           max-width: 70%;
         }
@@ -168,13 +169,15 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #4f04ff21;
+        background-color: #0e6ba8;
+        color: #a6e1fa;
       }
     }
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #9900ff20;
+        background-color: #a6e1fa;
+        color: #0e6ba8;
       }
     }
   }
