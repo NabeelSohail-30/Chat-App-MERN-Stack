@@ -22,8 +22,8 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <Container>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            {/* <img src={Logo} alt="logo" /> */}
+            <h3>Connectify</h3>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
@@ -68,7 +68,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: #080420;
+  background-color: #0a2472;
   .brand {
     display: flex;
     align-items: center;
@@ -88,6 +88,7 @@ const Container = styled.div`
     align-items: center;
     overflow: auto;
     gap: 0.8rem;
+
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
@@ -96,8 +97,9 @@ const Container = styled.div`
         border-radius: 1rem;
       }
     }
+
     .contact {
-      background-color: #ffffff34;
+      background-color: #001c55;
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
@@ -107,24 +109,33 @@ const Container = styled.div`
       gap: 1rem;
       align-items: center;
       transition: 0.5s ease-in-out;
+
       .avatar {
         img {
           height: 3rem;
         }
       }
+
       .username {
         h3 {
           color: white;
         }
       }
-    }
-    .selected {
-      background-color: #9a86f3;
+
+      &.selected {
+        background-color: #a6e1fa;
+
+        .username {
+          h3 {
+            color: #00072d;
+          }
+        }
+      }
     }
   }
 
   .current-user {
-    background-color: #0d0d30;
+    background-color: #0e6ba8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +148,7 @@ const Container = styled.div`
     }
     .username {
       h2 {
-        color: white;
+        color: #00072d;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {
